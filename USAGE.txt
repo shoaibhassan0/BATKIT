@@ -1,0 +1,156 @@
+BATKIT COMMAND
+
+     BATKIT is an external command that allows using console graphicaly, but 
+     not only. It enables also user interractions such as mouse.
+
+     For example, BATKIT allows console cursor position to be changed, change 
+     loccally console's colors, or even get user mouse inputs.
+
+SYNOPSIS
+
+         BATKIT [/d Text] [/g X Y] [/c Color] [/m] [/k] [k_] [/a Character] [/w 
+      Duration] [/s File] [/o OffsetX OffsetY] [/h Mode] [/p Mode] [/t get title]
+      [/cs cursor size] [/n prints new line] [/l Prints length of given string]
+       [/ad prints ascii code of character given] [/q Disable or enable quick edit mode]
+       [/m[_]  Prints hover info]
+
+
+
+     Allows user to manage console.
+        - /cs - Change cursor size from 0 to 100. 
+        batkit /cs 50 then cursor will be half.
+          
+        - /q - Enable or disable quick edit mode. 
+         for example.
+         batkit /q 0 means off the quick edit mode.
+
+         batkit /q 1 means on the quick edit mode.
+         
+        - /n - Print's a new line.
+        
+        - /l - Return the length of string
+  
+        - /ad - Prints the ascii code of characters given.
+
+        - /t Get the title of window and print it.
+ 
+        - /D : Prints text. 
+
+        - /G : Changes cursor position.
+          .
+
+        - /C : Changes console's color . 
+          
+
+        - /M : Get a user click. 
+
+        - /m_ : - Prints the hover info. 
+
+        - /K[_] : Get a user keystroke.Without blocking or wait.
+
+        - /A : Prints character associated with a code. See BATKIT (/a) (-> 
+          ``_BATKIT/ascii'') . 
+  
+
+        - /W : Make a delay.
+
+
+        - /S : Plays a .WAV file. 
+         
+
+        - /H : Hides or show the console's cursor.
+
+
+       - /O : Moves origin of console. This command is usefull to make 
+          sprites via BATKIT.
+
+	- /P : Changes the console's window mode.details are below 
+
+
+          /p   Changes command prompt's window display mode.
+
+        - MODE : Specify the display mode that will be set for the command 
+          prompt's window.
+
+             - 0 : Hides the window.
+
+             - 1 : Activate and show the window, restoring it to its original 
+               size. This value should not be used because it's reserved to 
+               first call to show window. You should use value 9 instead.
+
+             - 2 : Activate the window and minimizes it (show it in task bar).
+
+             - 3 : Activate the window and make it maximized. 
+
+             - 4 : Shows the window restored to its original size. Same result 
+               as value 1, execpt that the window does not obtain focus.
+
+             - 5 : Activate the window without modifiing it.
+
+             - 6 : Minimizes the window and activate another window. 
+
+             - 7 : Minimizes the window. Same result as value 2 except that 
+               the window is not activated.
+
+             - 8 : Shows the window without modifing it. Same result as value 
+               1, except that the window does not obtain focus.
+
+             - 9 : Activate the window and set its size and its position to 
+               the initial values if the window was either maximized or 
+               minimized.
+
+             - 10 : Show the windows and set its size and its postion to the 
+               default values.
+
+             - 11 : Minimizes the windows, even if the command prompt does not 
+               respond. This value is not suposed to be used, as it would be 
+               surprising that BATKIT (-> ``../BATKIT'') continue running even 
+               if the command prompt does not respond.
+
+
+
+
+
+
+
+
+
+
+
+
+     Moves console's origin.
+
+        - OFFSETX : Column number of the new origin (starts at 0 (leftmost 
+          column)).
+
+        - OFFSETY : Line number of the new origin (starts at 0 (top)).
+
+     Later commands BATKIT(/g) (-> ``goto'') will behave like they moved the 
+     cursor to the point of coordinates (X+OFFSETX,Y+OFFSETY)
+
+NOTES
+
+     You can mix several options on only one BATKIT command line, as shown by 
+     ....
+
+     Thus, the following script:
+
+         BATKIT /g 10 10
+         BATKIT /d "Hello world"
+         BATKIT /g 0 0
+
+     Can be shortened like this:
+
+         BATKIT /g 10 10 /d "Hello world" /g 0 0
+
+
+LICENSE
+
+     BATKIT is a free software distributed under GNU GENERAL PUBLIC LICENSE 
+     VERSION 1.0.
+
+AUTHOR
+
+     BATKIT has been written by SHOAIB HASSAN. The project is no more develloped 
+     actually.
+

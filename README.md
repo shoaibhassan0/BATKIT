@@ -1,5 +1,3 @@
-# BATKIT-v1.0
-The BATKIT has all arguments that are in BATBOX and also many other new arguments to make console GUI MODE.
 BATKIT COMMAND
 
      BATKIT is an external command that allows using console graphicaly, but 
