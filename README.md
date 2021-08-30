@@ -89,6 +89,6 @@ LICENSE
 
 AUTHOR
 
-     BATKIT has been written by SHOAIB HASSAN. The project is no more develloped 
-     actually.
-
+     BATKIT has been written by SHOAIB HASSAN. we will add some other arguments
+     in future.
+     
