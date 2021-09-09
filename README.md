@@ -89,6 +89,6 @@ LICENSE
 
 AUTHOR
 
-     BATKIT has been written by SHOAIB HASSAN. we will add some other arguments
+     BATKIT has been written by SHOAIB HASSAN and ANIC17. we will add some other arguments
      in future.
      
